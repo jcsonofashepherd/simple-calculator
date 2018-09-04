@@ -18,7 +18,6 @@ $(document).ready(function() {
     if (reset) {
       gNumStr = '';
       gTotStr = '';
-      reset = false;
     }
     if (gTotStr == '0') {
       gNumStr = '';
@@ -29,6 +28,7 @@ $(document).ready(function() {
     $('h5').text(gNumStr);
     $('h1').text(gTotStr.slice(0, 9));
     op = true;
+    reset = false;
   })
   
   //  Adding operations to global equation
@@ -47,6 +47,10 @@ $(document).ready(function() {
   //  Adding decimals to numbers
   $('#Dec').on('click', function() {
     if (dec) {
+      if (reset) {
+        gNumStr = '';
+        gTotStr = '';
+      }
       if (gNumStr == '') { 
         gNumStr = '0';
         gTotStr += '0';
@@ -80,7 +84,6 @@ $(document).ready(function() {
       gNumStr = totArr[0];
       $('h1').text(gTotStr.slice(0,9));
       $('h5').text($(this).text());
-      if (!gTotStr.includes(".")) dec = true;
       reset = true;
     }
   })
