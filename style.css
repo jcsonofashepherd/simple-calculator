@@ -1,0 +1,75 @@
+body {
+  background: #fcfcfc;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#Container {
+  height: 450px;
+  width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -225px;
+  margin-left: -150px;
+  background: black;
+  box-shadow: 0 0 20px 2px black;
+}
+
+#TopScreen {
+  height: 100px;
+  width: 300px;
+  background: black;
+}
+
+h1, h5 { 
+  text-align: right;
+  padding-right: 5px;
+  color: white;
+}
+
+#BotScreen {
+  height: 25px;
+  width: 300px;
+  background: black;
+}
+
+.bigBtn {
+  float: left;
+  height: 65px;
+  width: 150px;
+  background: #3f3f3f;
+  color: white;
+  border: 1px solid #a0a0a0;
+  text-align: right;
+  padding-top: 37.5px;
+  padding-right: 5px;
+}
+
+.littleBtn {
+  float: left;
+  height: 65px;
+  width: 75px;
+  background: black;
+  border: 1px solid #a0a0a0;
+  color: white;
+  text-align: right;
+  padding-top: 37.5px;
+  padding-right: 5px;
+}
+
+#Zero { background: black }
+#Mul, #Min, #Plus { background: #3f3f3f }
+#Eql { background: #c0c0c0 }
+#Div, #Mul, #Min, #Plus, #Eql { border-right: none }
+#Zero, #Dec, #Eql { border-bottom: none }
+#C, #Seven, #Four, #One, #Zero { border-left: none }
+
+.littleBtn:active { 
+  border: 1px solid black;
+  padding-top: 40px;
+}
+
+.bigBtn:active { 
+  border: 1px solid black;
+  padding-top: 40px;
+}
